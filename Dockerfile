@@ -3,7 +3,7 @@ FROM debian:9.12-slim
 RUN set -x && \
     apt-get -qq update && \
     apt-get -qq install apt-transport-https curl awscli && \
-    curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | bash -s -- --mariadb-server-version="mariadb-10.4" && \
+    curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | bash -s -- --mariadb-server-version="mariadb-10.2" && \
     apt-get -qq install mariadb-backup && \
     apt-get -qq autoclean && apt-get -qq autoremove && rm -rf /tmp/* /var/cache/apt/* /var/cache/depconf/*
 
